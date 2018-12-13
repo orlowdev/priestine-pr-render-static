@@ -1,5 +1,8 @@
 # `@priestine/routing` Render Static Module
 
+[![pipeline](https://gitlab.com/priestine/pr-render-static/badges/master/pipeline.svg)](https://gitlab.com/priestine/pr-render-static) [![codecov](https://codecov.io/gl/priestine/pr-render-static/branch/master/graph/badge.svg)](https://codecov.io/gl/priestine/pr-render-static) [![licence: MIT](https://img.shields.io/npm/l/@priestine/pr-render-static.svg)](https://gitlab.com/priestine/pr-render-static) [![docs: typedoc](https://img.shields.io/badge/docs-typedoc-blue.svg)](https://priestine.gitlab.io/pr-render-static) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![versioning: semantics](https://img.shields.io/badge/versioning-semantics-912e5c.svg)](https://gitlab.com/priestine/semantics) [![npm](https://img.shields.io/npm/dt/@priestine/pr-render-static.svg)](https://www.npmjs.com/package/@priestine/pr-render-static) [![npm](https://img.shields.io/npm/v/@priestine/pr-render-static.svg)](https://www.npmjs.com/package/@priestine/pr-render-static)
+
+
 The `pr-render-static` module allows rendering static files using `@priestine/routing`.
 
 ## Installation
