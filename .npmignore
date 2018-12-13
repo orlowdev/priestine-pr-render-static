@@ -11,3 +11,5 @@ node_modules
 *.md
 tsconfig.json
 .prettierrc
+jest.config.js
+yarn-error.log
