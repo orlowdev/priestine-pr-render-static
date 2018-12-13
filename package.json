@@ -1,0 +1,62 @@
+{
+  "name": "pr-render-static",
+  "version": "0.0.0-dev",
+  "description": "@priestine/routing module for rendering static files",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "docs": "rm -rf node_modules/.cache && typedoc --out ./docs . --externalPattern '**/{node_modules,coverage,docs,.nyc_output,.git}/**' --excludeExternals --ignoreCompilerErrors --mode file",
+    "build:dist": "tsc",
+    "build:docs": "typedoc --out ./docs ./src --exclude '**/*.spec.ts' --ignoreCompilerErrors --mode file",
+    "build:ci": "tsc",
+    "test": "jest",
+    "coverage:cover": "rm -rf coverage && yarn test --coverage",
+    "style:check": "prettier --list-different src/**/*.ts src/*.ts",
+    "style:fix": "prettier --write src/**/*.ts src/*.ts"
+  },
+  "keywords": [
+    "priestine-routing",
+    "middleware",
+    "static",
+    "files",
+    "http",
+    "node"
+  ],
+  "author": {
+    "email": "priestine.dev@gmail.com",
+    "name": "priestine",
+    "url": "https://priestine.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/priestine/pr-render-static"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/priestine/pr-render-static/issues"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
+    "@priestine/routing": "^1.3.1",
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.12",
+    "husky": "^1.2.0",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.3",
+    "ts-jest": "^23.10.5",
+    "typedoc": "^0.13.0",
+    "typescript": "^3.2.2"
+  },
+  "peerDependencies": {
+    "@priestine/routing": "^1.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn style:check && yarn coverage:cover",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
