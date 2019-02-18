@@ -1,6 +1,6 @@
 import { IGenericHttpContext, IHttpMiddlewareLike } from '@priestine/routing';
 import * as fs from 'fs';
-import { join, resolve } from 'path';
+import { resolve } from 'path';
 
 /**
  * RenderStatic context intermediate descriptor.
@@ -48,7 +48,7 @@ export abstract class RenderStatic {
  * @returns {(ctx: RenderStaticContext) => void}
  */
 export const AssignStaticDir = (dir: string) => (ctx: RenderStaticContext) => {
-  ctx.intermediate.requestedFile = resolve(join('.', dir, resolve(ctx.request.url).replace(dir, '')));
+  ctx.intermediate.requestedFile = resolve('.', dir, resolve(ctx.request.url).replace(dir, ''));
 };
 
 /**
